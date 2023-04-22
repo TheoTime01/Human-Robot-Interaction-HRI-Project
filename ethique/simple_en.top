@@ -1,0 +1,32 @@
+topic: ~simple()
+language: enu
+
+concept:(hello) [hello hi pepper]
+
+u:([~hello e:SimpleWeb/Start]) How can I help you ? $projet_ihr_sibenaler_perrichet/Page/Empty=1
+
+	u1:(* resistor) Ok, here is a tool for calculating the value of a resistor. $projet_ihr_sibenaler_perrichet/Page/Resistance=1 
+
+		u2:(Thank you) You're welcome ! $projet_ihr_sibenaler_perrichet/Page/Start=1
+	
+	u1:(* explanation) What can I explain to you ?$projet_ihr_sibenaler_perrichet/Page/Selection=1
+
+		u2:(* voltage divider bridge) Ok, here is how a voltage divider bridge works. $projet_ihr_sibenaler_perrichet/Page/DemoPdt=1
+
+			u3:(Thank you) You're welcome ! $projet_ihr_sibenaler_perrichet/Page/Start=1
+
+		u2:(* Ampere's law) Ok, here is how Ampere's law works. $projet_ihr_sibenaler_perrichet/Page/DemoAmpere=1
+
+			u3:(Thank you) You're welcome ! $projet_ihr_sibenaler_perrichet/Page/Start=1
+
+		u2:(* Faraday's law) Ok, here is how Faraday's law works.$projet_ihr_sibenaler_perrichet/Page/DemoFaraday=1
+
+			u3:(Thank you) You're welcome ! $projet_ihr_sibenaler_perrichet/Page/Start=1
+		
+	u1:({I am} bored) I am sorry to hear that. Can I tell you something ? $projet_ihr_sibenaler_perrichet/Page/Empty=1
+
+		u2:(yes) $projet_ihr_sibenaler_perrichet/Page/Empty=1 ^call(facts.get_fact())
+			c3:(_*) $1
+				u4:(Thank you) You're welcome ! $projet_ihr_sibenaler_perrichet/Page/Start=1
+
+		u2:(no) Ok, I will leave you alone then ... $projet_ihr_sibenaler_perrichet/Page/Start=1

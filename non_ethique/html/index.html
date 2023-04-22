@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Valeur résistance</title>
+	<style src="main.css"></style>
+    <script src="jquery-1.11.2.min.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+    <script type="text/javascript" src="./JS/sample.js"></script>
+    <script src="/libs/qimessaging/1.0/qimessaging.js"></script>
+</head>
+<body>
+
+
+    <!--page vide-->
+    <div id="page_vide">
+        <a><h1></h1></a>
+    </div>
+
+
+    <!--page start-->
+    <div id="page_start">
+        <a><h1>Hello !</h1></a><br>
+        <a><h1>Click to Start</h1></a>
+    </div>
+
+
+    <!--page selection-->
+    <div id="page_selection">
+        <a><h1>Available Explanations</h1></a>  
+        <a><h2>voltage divider bridge</h2></a>  
+        <a><h2>Ampere's law</h2></a>  
+        <a><h2>Faraday's law</h2></a>       
+    </div>
+  
+  
+
+    <!--calcul resistance-->
+    <div id="page_resistance" class="container">
+        <h1>Calculation of the value of a resistor</h1><br>
+
+        <canvas class="center" id="resistor" width="800" height="300"></canvas><br>
+
+        <script src="./JS/resistor.js"></script>
+
+
+        <label for="couleur1-select">Choice of colors : </label>
+
+        <select name="couleur1" id="couleur1-select">
+            <option value="black">Noir</option>
+            <option value="brown">Marron</option>
+            <option value="red">Rouge</option>
+            <option value="orange">Orange</option>
+            <option value="yellow">Jaune</option>
+            <option value="green">Vert</option>
+            <option value="blue">Bleu</option>
+            <option value="violet">Violet</option>
+            <option value="grey">Gris</option>
+            <option value="white">Blanc</option>
+        </select>
+        <select name="couleur2" id="couleur2-select">
+            <option value="black">Noir</option>
+            <option value="brown">Marron</option>
+            <option value="red">Rouge</option>
+            <option value="orange">Orange</option>
+            <option value="yellow">Jaune</option>
+            <option value="green">Vert</option>
+            <option value="blue">Bleu</option>
+            <option value="violet">Violet</option>
+            <option value="grey">Gris</option>
+            <option value="white">Blanc</option>
+        </select>
+        <select name="couleur3" id="couleur3-select">
+            <option value="black">Noir</option>
+            <option value="brown">Marron</option>
+            <option value="red">Rouge</option>
+            <option value="orange">Orange</option>
+            <option value="yellow">Jaune</option>
+            <option value="green">Vert</option>
+            <option value="blue">Bleu</option>
+            <option value="violet">Violet</option>
+            <option value="grey">Gris</option>
+            <option value="white">Blanc</option>
+        </select>
+        <select name="couleur4" id="couleur4-select">
+            <option value="gold">Doré</option>
+            <option value="silver">Argenté</option>
+        </select>
+
+        
+        <p id="myText">Resistance value: </p><br>
+
+        <button class="button" onclick="myFunction()">Calcul</button><br>
+
+    </div>
+
+
+
+
+
+
+
+
+        <!--demo PDT-->
+        <div id="page_demo_pdt" style="display:flex;">
+            <div style="flex:1;">
+                <img src="./images/Capture.jpg" alt="Mon image" style="width:100%;">
+            </div>
+            <div style="flex:2;padding:10px;">
+                <h1> demonstration of the voltage divider bridge</h1>
+                <section>
+                    <p>The voltage divider bridge is an electrical circuit that divides an input voltage into an output voltage proportional to the resistance of the circuit components. The voltage divider bridge can be demonstrated using Ohm's law and Kirchhoff's law.</p>
+                    <p>The voltage divider bridge usually consists of two resistors, R1 and R2, which are connected in series with a voltage source Vcc. The output voltage Vout is taken at the junction of the two resistors.</p> <p>The voltage divider bridge is usually composed of two resistors, R1 and R2, which are connected in series with a voltage source Vcc.
+                </section>
+                <section>
+                    <p>Ohm's law states that the voltage across a resistor is equal to the product of the resistance and the current through it. Using this law, we can write the following equations:</p>
+            <div class="equation">
+            V1 = R1 x I<br>
+            V2 = R2 x I
+            </div>
+            <p>Where V1 and V2 are the voltages across resistors R1 and R2, I is the current through the resistors, respectively.</p>
+        </section>
+        <section>
+            <p>Kirchhoff's law of voltages states that the sum of the voltages in a loop must equal zero. Applying this law to the voltage divider bridge, we can write:</p>
+            <div class="equation">
+            Vcc - V1 - V2 = 0
+            </div>
+            <p>Substituting the voltage equations V1 and V2 into the Kirchhoff equation, we obtain:</p>
+            <div class="equation">
+            Vcc - R1 x I - R2 x I = 0
+            </div>
+            <p>By isolating I, we obtain :</p>
+            <div class="equation">
+            I = Vcc / (R1 + R2)
+            </div>
+            <p>Using this equation for I, we can find the output voltage Vout :</p>
+            <div class="equation">
+            Vout = R2 x I = (R2 / (R1 + R2)) x Vcc
+            </div>
+        </section>
+            </div>
+        </div>
+
+
+
+        <!--demo ampere-->
+        <div id="page_demo_ampere">
+            <section>
+                <h2>Description</h2>
+                <p>Ampere's law establishes a relationship between the magnetic field around a closed loop and the electric current flowing through the loop.</p>
+            </section>
+            <section>
+                <p>The equation of the Maxwelle-Ampere law is the following:</p>
+                <div class="equation">
+                    $$\nabla \times \mathbf{B} = \mu_0 \mathbf{J}$$
+                </div>
+            </section>
+            <section>
+                <p>Starting from this equation, we apply Stokes' theorem, which gives us:</p>
+                <div class="equation">
+                    \begin{align*}
+                        \oint_{S} \mathbf{B} \cdot d\mathbf{\ell} &= \mu_0 \oint_{S} \mathbf{J} d\ell \\
+                        &= \mu_0 I_{enc} \\
+                        &= \mu_0 I
+                    \end{align*}
+                </div>
+                <p>we thus obtain:</p>
+                <div class="equation">
+                    $$\oint_{S} \mathbf{B} \cdot d\mathbf{\ell} = \mu_0 I$$
+                </div>
+            </section>
+        </div>
+
+
+
+        <!--demo faraday-->
+        <div id="page_demo_faraday">
+            <section>
+                <h2>Description</h2>
+                <p>Faraday's law describes how a time-varying magnetic field can induce an electric current in a circuit.</p>
+            </section>
+            <section>
+                <p>We use the Maxwell-Faraday equation:</p>
+                <div class="equation">
+                    $$\nabla \times \mathbf{E} = - \frac{\partial \mathbf{B}}{\partial t}$$
+                </div>
+            </section>
+            <section>
+                <p>We consider a closed wire circuit (C) and apply Stokes' theorem:</p>
+                <div class="equation">
+                    $$\iint_S \nabla \times \mathbf{E} \cdot \mathrm{d} \boldsymbol{S} = \oint_S \mathbf{E} \cdot \mathrm{d}\boldsymbol{\ell} = - \frac{d}{dt} \int_S \mathbf{B} \cdot \mathrm{d}\mathbf{S}$$
+                </div>
+            </section>
+            <section>
+                <p>in conclusion:</p>
+                <div class="equation">
+                    $$e = - \frac{d \Phi_{B}}{dt}$$
+                </div>
+            </section>
+        </div>
+</body>
+</html>
