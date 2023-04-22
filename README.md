@@ -21,8 +21,8 @@
 
 ## Autors
 
-- [Theotime PERRICHET](https://github.com/TheoTime01)
-- [Arnaud SIBENALER](https://github.com/ArnaudS-CPE)
+- [Theotime P](https://github.com/TheoTime01)
+- [Arnaud S](https://github.com/ArnaudS-CPE)
 
 ## Tree structure
 
@@ -120,28 +120,25 @@ connect the pepper to the wifi
 
 ```
 naoqi-bin
-
 ```
 
 - In another terminal, run the choregraphe application
 
 ```
 choregraphe-bin
-
 ```
 
 - In another terminal, run the python application
 
 ```
 python application.py
-
 ```
 
 - In another terminal, run the main script 
   
-  ```
-  python app.py
-  ```
+```
+python app.py
+```
 
 ## Instructions for use
 
