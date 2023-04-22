@@ -27,7 +27,7 @@
 ## Tree structure
 
 ```
-projet_ihr_sibenaler_perrichet
+Human Robot Interaction (HRI) Project
 │   README.md
 │
 ├───ethique
