@@ -80,7 +80,7 @@ Set up two scenarios:
 
 ![img](/image/1.png)
 
-_youtube link_=
+#### [lien youtube](https://youtu.be/tRi2CV4AP5A?t=3)
 
 #### Description of the ethical case(s) implemented
 
@@ -106,7 +106,7 @@ _youtube link_=
 
 ![img](/image/2.png)
 
-_youtube link_=
+#### [lien youtube](https://youtu.be/tRi2CV4AP5A?t=63)
 
 #### Description of the ethical case(s) implemented
 
